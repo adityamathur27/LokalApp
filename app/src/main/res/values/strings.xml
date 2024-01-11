@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lokal App</string>
+    <string name="icon_description">Cyrpto\n\n</string>
+    <string name="refreshing">Refreshing...</string>
+</resources>
