@@ -72,6 +72,7 @@ public class CryptoDataRecyclerViewAdapter extends RecyclerView.Adapter<CryptoDa
         holder.rateTextView.setText(String.valueOf(target+" "+ rates));
         Glide.with(holder.itemView.getContext())
                 .load(cryptoData.getIcon_url())
+                .circleCrop()
                 .into(holder.iconImageView);
 
     }

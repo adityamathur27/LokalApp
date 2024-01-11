@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a" , Locale.getDefault());
             String currentTime = simpleDateFormat.format(calendar.getTime());
             TextView timeTextView = findViewById(R.id.lastRefreshTimeTextView);
-            timeTextView.setText("Last Refreshed: " + currentTime);
+            timeTextView.setText("Last "+"\n"+"Refreshed: " + currentTime);
             countDownTimer = new CountDownTimer(180000, 1000) {
             TextView countDownText = findViewById(R.id.countdownTextView);
             public void onTick(long millisUntilFinished) {
-                countDownText.setText("Seconds Remaining: " + millisUntilFinished / 1000);
+                countDownText.setText("Seconds "+"\n" +"Remaining: "+ millisUntilFinished / 1000);
             }
             public void onFinish() {
                 countDownText.setText(R.string.refreshing);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a" , Locale.getDefault());
                 String currentTime = simpleDateFormat.format(calendar.getTime());
                 TextView timeTextView = findViewById(R.id.lastRefreshTimeTextView);
-                timeTextView.setText("Last Refreshed: " + currentTime);
+                timeTextView.setText("Last"+"\n" +"Refreshed: " + currentTime);
                 start();
             }
 
